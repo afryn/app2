@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img_div{
+            display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 30px 0;
+        }
+        .btn{
+            border: none;
+            width: fit-content;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: rgb(255, 217, 170);
+            cursor: pointer;
+            box-shadow: 0px 2px 2px 1px  rgb(234, 234, 234);
+            margin: 10px;
+        }
+        img{
+            width: 100px;
+        }
+        .img_3{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <div class="img_div">
+                <img class="img_1" src="cloud.png" alt="img">
+                <img class="img_2" src="download.jpeg" alt="img">
+                <img src="download (1).jpeg" class="img_3" alt="">
+                <button class="btn" onclick="deleteCloud()">Delete</button>
+            </div>
+        </div>
+        <div>
+            <div class="img_div">
+                <img class="image_1" src="IMG_20230716_105648.png" alt="img">
+                <img class="image_2" src="IMG_20230716_105631.png" alt="img">
+                <button class="btn" onclick="deleteNeck()">Delete</button>
+          </div>
+        </div>
+    </div>
+    <script>
+        function deleteCloud(){
+            document.querySelector('.img_1').style.visibility = 'hidden';
+            document.querySelector('.img_2').style.display = 'none';
+            document.querySelector('.img_3').style.display = 'block';
+        }
+
+        function deleteNeck(){
+            document.querySelector('.image_1').style.visibility = 'hidden';
+        }
+    </script>
+</body>
+</html>
